@@ -85,12 +85,68 @@
             </div>
             
             <div id="caixa10">
-                <button name="botao_enviar" type="Button" onclick="enviarForm()">Enviar</button>
+                <button class="botao-neomorfico" name="botao_enviar" type="Button" onclick="enviarForm()">Enviar</button>
             </div>
 
             
 
         </form>
     </div>
+<script>
+function enviarForm() {
+    const form = document.getElementById('user-form');
+    let mensagem = "Dados enviados com sucesso!\n\n";
+
+    const nome = form.querySelector('#nome').value;
+    const email = form.querySelector('#email').value;
+    const senha = form.querySelector('#senha').value;
+    const texto = form.querySelector('#texto').value;
+    const favonum = form.querySelector('#favonum').value;
+    const nascimento = form.querySelector('#nascimento').value;
+    const pet = form.querySelector('#pet-select').value;
+
+    mensagem += `Nome: ${nome}\n`;
+    mensagem += `Email: ${email}\n`;
+    mensagem += `Senha: ${senha}\n`;
+    mensagem += `Coisa favorita: ${texto}\n`;
+    mensagem += `Número favorito: ${favonum}\n`;
+    mensagem += `Data de nascimento: ${nascimento}\n`;
+
+    const generoSelecionado = form.querySelector('input[name="genero"]:checked');
+    if (generoSelecionado) {
+        mensagem += `Gênero: ${generoSelecionado.nextElementSibling.innerText}\n`;
+    }
+
+    const acoesSelecionadas = form.querySelectorAll('input[name^="op"]:checked');
+    if (acoesSelecionadas.length > 0) {
+        mensagem += `Ações que faz: `;
+        acoesSelecionadas.forEach((acao, index) => {
+            mensagem += acao.nextElementSibling.innerText;
+            if (index < acoesSelecionadas.length - 1) {
+                mensagem += ", ";
+            }
+        });
+        mensagem += "\n";
+    }
+
+    mensagem += `Animal de estimação: ${pet}\n`;
+
+    alert(mensagem);
+
+    console.log("Dados do formulário:", {
+        nome: nome,
+        email: email,
+        senha: senha,
+        texto: texto,
+        favonum: favonum,
+        nascimento: nascimento,
+        genero: generoSelecionado ? generoSelecionado.nextElementSibling.innerText : 'Não selecionado',
+        acoes: Array.from(acoesSelecionadas).map(acao => acao.nextElementSibling.innerText),
+        animal: pet
+    });
+    console.log('é isso :D');
+    
+}
+</script>
 </body>
 </html>
