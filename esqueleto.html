@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site fodastico</title>
+    <link rel="stylesheet" href="embelezador.css">
+
+</head>
+<body>
+    <div id="waza">
+        <form action=""id ="user-form">
+            <h2>faça seu login:</h2>
+
+            <div id="caixa1">
+                <label for="nome">digite seu nome:</label>
+                <input type="name" nome="nome" id="nome" placeholder="Josney Silva"
+                required minlength="6" maxlength="20" pattern="">
+            </div>
+
+            <div id="caixa2">
+                <label for="email">email:</label>
+                <input type="email" nome="email" id="email" 
+                placeholder="email@exemplo.com" required maxlength="30">
+            </div>
+
+            <div id="caixa3">
+                <label for="senha">senha:</label>
+                <input type="password" nome="senha" id="senha" placeholder="de 6 a 20 caracteres"
+                required minlength="6" maxlength="20" pattern="">
+            </div>
+
+            <div id="caixa4">
+                <label for="texto">coisa favorita:</label>
+                <input type="text" nome="texto" id="texto" placeholder="digite algo que vc gosta"
+                required minlength="6" maxlength="20" pattern="">
+            </div>
+
+            <div id="caixa5">
+                <label for="favonum">digite seu numero favorito:</label>
+                <input type="number" nome="favonum" id="favonum" placeholder="aqui"
+                required minlength="6" maxlength="20" pattern="">
+            </div>
+
+            <div id="caixa6">
+                <label for="nascimento">sua data de nascimento:</label>
+                <input type="date" nome="nascimento" id="nascimento" placeholder="selecione aqui!"
+                required minlength="6" maxlength="20" pattern="">
+            </div>
+
+            <div id="caixa7">              
+                <p>qual é o seu genero</p>
+                <input type="radio" id="homi" name="genero" value="homi">
+                <label for="homi">homem</label><br>
+                <input type="radio" id="muie" name="genero" value="muie">
+                <label for="muie">mulher</label><br>
+                <input type="radio" id="coisa" name="genero" value="coisa">
+                <label for="coisa">honda sivic</label>
+            </div>
+
+            <div id="caixa8">               
+                <p>asinale as açoes que voce faz:</p>
+                <input type="checkbox" id="op1" name="op1" value="Bike">
+                <label for="waza"> respirar</label><br>
+                <input type="checkbox" id="op2" name="op2" value="Car">
+                <label for="waza"> beber agua</label><br>
+                <input type="checkbox" id="op3" name="op3" value="Boat">
+                <label for="waza"> pensar</label>               
+            </div>
+
+            <div id="caixa9">
+                <label for="pet-select">voce tem um nimal de estimaçao?</label>
+
+                <select name="pets" id="pet-select">
+                    <option value="">--selecione aqui--</option>
+                    <option value="dog">cachorro</option>
+                    <option value="cat">gato</option>
+                    <option value="hamster">Hamster</option>
+                    <option value="parrot">papagaio</option>
+                    <option value="spider">aranha</option>
+                    <option value="fish">peixe</option>
+                    <option value="nao">n/a</option>
+                </select>
+            </div>
+            
+            <div id="caixa10">
+                <button name="botao_enviar" type="Button" onclick="enviarForm()">Enviar</button>
+            </div>
+
+            
+
+        </form>
+    </div>
+</body>
+</html>

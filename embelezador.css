@@ -1,0 +1,66 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url(xpwallpaper.webp);
+    background-size: cover;
+    display: flex;
+    margin: auto;
+    width: 300px;
+    padding: 15px;
+    
+}
+
+#waza{
+border:solid 3px rgb(255, 238, 0);
+display: flex;
+padding: 20px;
+background-color: rgba(255, 255, 255, 0.493);
+}
+
+#caixa1{
+    display: flex;
+    flex-direction: column; 
+}
+
+#caixa2{
+    display: flex;
+    flex-direction: column;
+}
+
+#caixa3{
+    display: flex;
+    flex-direction: column;
+}
+
+#caixa4{
+    display: flex;
+    flex-direction: column;
+}
+
+#caixa5{
+    display: flex;
+    flex-direction: column;
+}
+
+#caixa6{
+    display: flex;
+    flex-direction: column;
+}
+
+#caixa7{
+    
+}
+
+#caixa8{
+    
+}
+
+#caixa9{
+    
+}
+
+#caixa10{
+
+
+}
+
